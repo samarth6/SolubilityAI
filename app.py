@@ -2,10 +2,59 @@ import streamlit as st
 
 st.set_page_config(
     page_title="SolubilityAI",
-    page_icon="🧪",
+    page_icon="⬡",
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+
+st.markdown("""
+<style>
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;   
+    margin-bottom: 0;
+}
+
+
+.header-icon {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-subtitle {
+    margin-top: -8px;
+    color: gray;
+    font-size: 14px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+st.markdown("""
+<div class="header-container">
+    <span class="header-icon">⬡</span>
+    <div class="header-title">SolubilityAI</div>
+</div>
+<div class="header-subtitle">
+    Molecular Solubility Prediction — XGBoost + Fuzzy Logic
+</div>
+""", unsafe_allow_html=True)
+
+
+st.markdown("---")
 
 from ui.styles  import inject_styles
 from ui.sidebar import render_sidebar
@@ -21,20 +70,7 @@ from core.models   import train_all_models
 
 inject_styles()
 
-col_logo, col_title = st.columns([0.08, 0.92])
-with col_logo:
-    st.markdown("## 🧪")
-with col_title:
-    st.markdown("""
-    <div style="padding-top:6px">
-        <span style="font-size:1.7rem; font-weight:700; color:#1a1a1a;">SolubilityAI</span>
-        <span style="font-size:0.9rem; color:#555; margin-left:14px;">
-            Molecular Solubility Prediction — XGBoost + Fuzzy Logic
-        </span>
-    </div>
-    """, unsafe_allow_html=True)
 
-st.divider()
 
 df = get_demo_dataset()
 X, feature_names = extract_features(df["smiles"].tolist())
