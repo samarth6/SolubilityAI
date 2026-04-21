@@ -154,25 +154,4 @@ streamlit run app.py
 
 ---
 
-## 🔮 Future Enhancements
 
-* Larger and more diverse datasets
-* Advanced feature engineering
-* Deployment on cloud platforms
-* Enhanced explainability dashboards
-* Integration with real drug discovery pipelines
-
----
-
-## 👨‍💻 Author
-
-**Samarth Kaushik**
-Machine Learning & Bioinformatics Enthusiast
-
----
-
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub!
-
----
