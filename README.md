@@ -28,12 +28,12 @@ It is ideal for **students, researchers, and developers** working in cheminforma
 
 ### 🔮 Fuzzy Logic Classification
 
-* Converts numeric predictions into human-friendly categories:
+Converts numeric predictions into human-friendly categories:
 
-  * Highly Soluble
-  * Soluble
-  * Poorly Soluble
-  * Insoluble
+* Highly Soluble
+* Soluble
+* Poorly Soluble
+* Insoluble
 
 ### 🧪 Flexible Input Options
 
@@ -44,35 +44,35 @@ It is ideal for **students, researchers, and developers** working in cheminforma
 ### 📊 Visualization & Analysis
 
 * **Chemical Space Mapping** (PCA & t-SNE)
-* **Molecular Radar Charts** (descriptor visualization)
+* **Molecular Radar Charts**
 * **Model Comparison Dashboard** (R², RMSE, CV scores)
-* **Parity Plots** for prediction accuracy
+* **Parity Plots**
 
 ### 📦 Batch Processing
 
 * Upload CSV files with SMILES
-* Predict solubility for multiple molecules at once
+* Predict solubility for multiple molecules
 
 ### 📐 Fuzzy System Viewer
 
 * Visualize membership functions
-* Understand how classification decisions are made
+* Understand decision-making logic
 
 ---
 
 ## 🌍 Real-World Impact
 
 * 🏥 **Drug Discovery**
-  Helps identify poorly soluble compounds early in the pipeline
+  Helps identify poorly soluble compounds early
 
 * 🔬 **Research Efficiency**
-  Reduces reliance on costly experimental testing
+  Reduces costly experimental trials
 
 * 🎓 **Educational Tool**
-  Demonstrates ML + fuzzy logic integration in chemistry
+  Demonstrates ML + fuzzy logic integration
 
 * ♻️ **Sustainable Science**
-  Minimizes unnecessary lab work and resource usage
+  Minimizes unnecessary lab experimentation
 
 ---
 
@@ -84,20 +84,58 @@ It is ideal for **students, researchers, and developers** working in cheminforma
 * **Cheminformatics:** RDKit
 * **Visualization:** Plotly
 * **Explainability:** SHAP
-* **API Integration:** PubChem (via requests)
+* **API Integration:** PubChem (requests)
 
 ---
 
+## ⚙️ Virtual Environment Setup
 
----
+This project uses a **Python virtual environment** for dependency isolation.
 
-## ⚙️ Installation
+### 1️⃣ Create Environment
 
 ```bash
-git clone https://github.com/samarth6/SolubilityAI.git
-cd SolubilityAI
+python -m venv venv
+```
 
+---
+
+### 2️⃣ Activate Environment
+
+#### ▶️ Windows (PowerShell)
+
+```bash
+venv\Scripts\activate
+```
+
+#### ▶️ macOS / Linux
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+---
+
+### 4️⃣ Upgrade pip (Recommended)
+
+```bash
+python -m pip install --upgrade pip
+```
+
+---
+
+### 5️⃣ Deactivate (Optional)
+
+```bash
+deactivate
 ```
 
 ---
@@ -108,24 +146,59 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+Then open:
+
+```
+http://localhost:8501
+```
+
 ---
 
 ## 🧪 Usage Guide
 
 1. Launch the app
-2. Select input method (list / search / SMILES)
-3. Choose a machine learning model
+2. Choose input method (list / search / SMILES)
+3. Select ML model
 4. Click **Run Prediction**
-5. Explore results across different tabs
+5. Explore insights across tabs
 
 ---
 
 ## 📊 Model Insights
 
-* Ensemble models like **Random Forest** and **XGBoost** typically perform best
-* Fuzzy logic enhances interpretability of predictions
-* Visualizations help understand molecular relationships and distribution
+* Ensemble models like **Random Forest** and **XGBoost** perform best
+* Fuzzy logic improves interpretability
+* Visualization reveals molecular relationships
 
 ---
+
+## ⚠️ Common Issues
+
+### t-SNE Error
+
+Ensure perplexity is smaller than dataset size.
+
+### RDKit Issues
+
+```bash
+pip install rdkit-pypi
+```
+
+### Streamlit Not Running
+
+```bash
+pip install streamlit
+```
+
+---
+
+## 📁 Project Structure (Simplified)
+
+```
+core/              # ML models, features, projections
+ui/                # Streamlit UI components
+app.py             # Main application
+requirements.txt   # Dependencies
+```
 
 
