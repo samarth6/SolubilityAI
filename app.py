@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import streamlit as st
 
 st.set_page_config(
@@ -63,7 +63,6 @@ with tab2: render_comparison_tab(cfg, trained_models, scaler, metrics, X, y)
 with tab3: render_chemical_space_tab(cfg, scaler, X, y, df)
 with tab4: render_fuzzy_system_tab(cfg, trained_models, scaler)
 with tab5: render_batch_tab(trained_models, scaler, feature_names)
-=======
 import streamlit as st
 
 st.set_page_config(
@@ -128,4 +127,4 @@ with tab2: render_comparison_tab(cfg, trained_models, scaler, metrics, X, y)
 with tab3: render_chemical_space_tab(cfg, scaler, X, y, df)
 with tab4: render_fuzzy_system_tab(cfg, trained_models, scaler)
 with tab5: render_batch_tab(trained_models, scaler, feature_names)
->>>>>>> 0e0a484 (first commit)
+
