@@ -7,13 +7,13 @@ def render_sidebar(trained_models, df):
         st.caption("XGBoost + Fuzzy Logic Engine")
         st.divider()
 
-        
         st.markdown("### 🔍 Molecule Input")
         input_mode = st.radio(
-            "How to enter molecule",
-            ["Pick from list", "Search by name", "Type SMILES"],
-            horizontal=False,
-        )
+    "How to enter molecule",
+    ["Pick from list", "Search by name", "Type SMILES"],
+    horizontal=False,
+    key="molecule_input_mode"
+)
 
         smiles = "c1ccc(cc1)O"
 
