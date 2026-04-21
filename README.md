@@ -88,32 +88,6 @@ It is ideal for **students, researchers, and developers** working in cheminforma
 
 ---
 
-## 📂 Project Structure
-
-```bash
-MolSol/
-│── app.py
-│── core/
-│   ├── data.py
-│   ├── features.py
-│   ├── models.py
-│   ├── fuzzy.py
-│   ├── projections.py
-│
-│── ui/
-│   ├── sidebar.py
-│   ├── styles.py
-│   └── tabs/
-│       ├── prediction.py
-│       ├── batch.py
-│       ├── comparison.py
-│       ├── chemical_space.py
-│       ├── fuzzy_system.py
-│       └── about.py
-│
-│── requirements.txt
-│── README.md
-```
 
 ---
 
