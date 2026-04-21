@@ -1,37 +1,178 @@
 # ⬡ SolubilityAI — Molecular Solubility Predictor
 
-A hybrid **XGBoost + Fuzzy Logic** bioinformatics web app built with Streamlit.
+A hybrid **Machine Learning + Fuzzy Logic** web application that predicts and interprets molecular solubility from SMILES strings. Built using **Streamlit**, this project combines predictive performance with human-readable insights for better understanding of chemical properties.
 
-## Features
-- 🤖 **5 Models** — Linear Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost
-- 🔮 **Fuzzy Classification** — Membership degrees across Highly Soluble / Soluble / Poorly Soluble / Insoluble
-- 🗺️ **Chemical Space** — PCA & t-SNE projections with query molecule highlighted
-- 📡 **Molecular Radar** — Descriptor profile visualization
-- 📊 **Model Comparison** — R², RMSE, CV scores, parity plots
-- 📐 **Fuzzy System Viewer** — Full membership function visualization
+---
 
-## Installation
+## 🚀 Overview
+
+SolubilityAI is designed to:
+
+* Predict molecular solubility using multiple ML models
+* Provide **interpretable results** using fuzzy logic
+* Visualize molecular data in an intuitive and interactive way
+
+It is ideal for **students, researchers, and developers** working in cheminformatics, bioinformatics, or applied machine learning.
+
+---
+
+## ✨ Key Features
+
+### 🤖 Machine Learning Models
+
+* Linear Regression
+* Decision Tree
+* Random Forest
+* Gradient Boosting
+* XGBoost
+
+### 🔮 Fuzzy Logic Classification
+
+* Converts numeric predictions into human-friendly categories:
+
+  * Highly Soluble
+  * Soluble
+  * Poorly Soluble
+  * Insoluble
+
+### 🧪 Flexible Input Options
+
+* Select molecules from dataset
+* Search by chemical name (via PubChem API)
+* Enter custom SMILES strings
+
+### 📊 Visualization & Analysis
+
+* **Chemical Space Mapping** (PCA & t-SNE)
+* **Molecular Radar Charts** (descriptor visualization)
+* **Model Comparison Dashboard** (R², RMSE, CV scores)
+* **Parity Plots** for prediction accuracy
+
+### 📦 Batch Processing
+
+* Upload CSV files with SMILES
+* Predict solubility for multiple molecules at once
+
+### 📐 Fuzzy System Viewer
+
+* Visualize membership functions
+* Understand how classification decisions are made
+
+---
+
+## 🌍 Real-World Impact
+
+* 🏥 **Drug Discovery**
+  Helps identify poorly soluble compounds early in the pipeline
+
+* 🔬 **Research Efficiency**
+  Reduces reliance on costly experimental testing
+
+* 🎓 **Educational Tool**
+  Demonstrates ML + fuzzy logic integration in chemistry
+
+* ♻️ **Sustainable Science**
+  Minimizes unnecessary lab work and resource usage
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend/UI:** Streamlit
+* **Machine Learning:** scikit-learn, XGBoost
+* **Fuzzy Logic:** scikit-fuzzy
+* **Cheminformatics:** RDKit
+* **Visualization:** Plotly
+* **Explainability:** SHAP
+* **API Integration:** PubChem (via requests)
+
+---
+
+## 📂 Project Structure
 
 ```bash
+MolSol/
+│── app.py
+│── core/
+│   ├── data.py
+│   ├── features.py
+│   ├── models.py
+│   ├── fuzzy.py
+│   ├── projections.py
+│
+│── ui/
+│   ├── sidebar.py
+│   ├── styles.py
+│   └── tabs/
+│       ├── prediction.py
+│       ├── batch.py
+│       ├── comparison.py
+│       ├── chemical_space.py
+│       ├── fuzzy_system.py
+│       └── about.py
+│
+│── requirements.txt
+│── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/samarth6/SolubilityAI.git
+cd SolubilityAI
+
 pip install -r requirements.txt
 ```
 
-## Run
+---
+
+## ▶️ Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-## Usage
-1. Enter a SMILES string in the sidebar (e.g. `c1ccccc1` for benzene)
-2. Select your model
-3. Click **PREDICT SOLUBILITY**
-4. Explore tabs for deeper analysis
+---
 
-## Tech Stack
-- `streamlit` — UI framework
-- `xgboost` / `scikit-learn` — ML models
-- `scikit-fuzzy` — Fuzzy logic system
-- `rdkit-pypi` — Molecular descriptor extraction
-- `plotly` — Interactive visualizations
-- `shap` — Model explainability
+## 🧪 Usage Guide
+
+1. Launch the app
+2. Select input method (list / search / SMILES)
+3. Choose a machine learning model
+4. Click **Run Prediction**
+5. Explore results across different tabs
+
+---
+
+## 📊 Model Insights
+
+* Ensemble models like **Random Forest** and **XGBoost** typically perform best
+* Fuzzy logic enhances interpretability of predictions
+* Visualizations help understand molecular relationships and distribution
+
+---
+
+## 🔮 Future Enhancements
+
+* Larger and more diverse datasets
+* Advanced feature engineering
+* Deployment on cloud platforms
+* Enhanced explainability dashboards
+* Integration with real drug discovery pipelines
+
+---
+
+## 👨‍💻 Author
+
+**Samarth Kaushik**
+Machine Learning & Bioinformatics Enthusiast
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
+
+---
