@@ -1,6 +1,8 @@
 import streamlit as st
 from core.data import get_molecule_options, get_smiles_from_selection, pubchem_name_to_smiles
 
+
+
 def render_sidebar(trained_models, df):
     with st.sidebar:
         st.markdown("## 🧪 SolubilityAI")
@@ -14,6 +16,7 @@ def render_sidebar(trained_models, df):
     horizontal=False,
     key="molecule_input_mode"
 )
+        
 
         smiles = "c1ccc(cc1)O"
 
@@ -80,7 +83,17 @@ def render_sidebar(trained_models, df):
         show_fuzzy_rules  = st.toggle("Show fuzzy rule details",    value=True)
         show_history      = st.toggle("Show session history",       value=True)
         show_shap         = st.toggle("Show SHAP explanation",      value=False)
-        perplexity        = st.slider("t-SNE perplexity", 5, 30, 10)
+        
+        n_samples = len(df)
+
+        max_perp = max(2, min(30, (n_samples - 1) // 3))
+        perplexity = st.slider(
+            "t-SNE perplexity",
+            min_value = 2,
+            max_value = max_perp,
+            value = min(10, max_perp),
+            help =f"Must be < dataset size ({n_samples})"
+        )
 
         st.divider()
         predict = st.button("🔬 Run Prediction", use_container_width=True, type="primary")

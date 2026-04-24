@@ -14,7 +14,7 @@ st.markdown("""
 .header-container {
     display: flex;
     align-items: center;
-    gap: 4px;   
+    gap: 2px;   
     margin-bottom: 0;
 }
 

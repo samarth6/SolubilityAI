@@ -15,7 +15,10 @@ def render_chemical_space_tab(cfg, scaler, X, y, df):
 
     method = st.radio("Projection", ["PCA","t-SNE"], horizontal=True)
     pca_coords, var_ratio = compute_pca(X)
-    tsne_coords = compute_tsne(X, perplexity=cfg["perplexity"])
+    if X.shape[0] < 5:
+        st.warning("Not Enough data for t-SNE visualization")
+        return
+    tsne_coords = compute_tsne(X,perplexity=cfg.get("perplexity", 30))
 
     if method == "PCA":
         coords = pca_coords
